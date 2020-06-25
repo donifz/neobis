@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 770px;
+  background-color: #fbfbfb;
+  z-index: -10;
+  top: -28px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1176px;
+}
+.header {
+  margin-top: 28px;
+  height: 742px;
+  position: relative;
+}
+.header__wrapper {
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav {
+  padding: 0;
+  display: flex;
+}
+.header .header__nav .nav__list {
+  margin-right: 32px;
+}
+.header .header__nav .nav__list a {
+  font-size: 18px;
+}
+.header .header__nav .nav__list_active a {
+  border-bottom: 2px solid #faaac7;
+  color: #faaac7;
+}
+.header__nav .nav__contacts {
+  display: flex;
+  align-items: center;
+}
+.header__nav .nav__contacts__tel {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+.header .nav__contacts .nav__call {
+  margin-left: 32px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 14px 40px;
+  color: #f6616e;
+  border: 2px solid;
+  cursor: pointer;
+}
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  padding: 20px 75px;
+  background-color: #ff4e2e;
+  color: white;
+}
+.header__banner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header__banner .banner__wrapper {
+  position: relative;
+}
+.header__banner .banner-title {
+  font-size: 80px;
+  letter-spacing: 0.03em;
+  margin-bottom: 25px;
+}
+.header__banner .banner__photo {
+  position: absolute;
+  right: -600px;
+  top: -330px;
+  z-index: -1;
+}
+.header__banner .banner-text {
+  color: gray;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+}
+.banner-title__body .read-more {
+  margin-top: 50px;
+}
