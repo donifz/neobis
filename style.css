@@ -14,7 +14,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   background-color: #fbfbfb;
-
 }
 
 p {
@@ -64,7 +63,8 @@ ul {
   margin: 0 auto;
 }
 
-.header__wrapper {}
+.header__wrapper {
+}
 
 .header__nav {
   display: flex;
@@ -113,7 +113,6 @@ ul {
   padding: 14px 40px;
   color: #f6616e;
   border: 2px solid #f6616e;
-  ;
   cursor: pointer;
 }
 
@@ -132,7 +131,8 @@ ul {
 }
 
 .header__banner {
-  height: 100%;
+  max-width: 100%;
+  min-height: 100%;
   display: flex;
   align-items: center;
 }
@@ -140,7 +140,9 @@ ul {
 .header__banner .banner__wrapper {
   position: relative;
 }
-
+.banner__avatar {
+  display: none;
+}
 .header__banner .banner-title {
   font-size: 80px;
   letter-spacing: 0.03em;
@@ -168,24 +170,23 @@ ul {
   background-color: #fbfbfb;
   transition-duration: 0.3s;
   color: #f6616e;
-
 }
 
 .main {
-  background-color: white
+  max-width: 100%;
+  background-color: white;
 }
 
 .services {
-
-  width: 100%;
+  max-width: 100%;
   height: 645px;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .services .services__wrapper {
-  width: 100%;
+  max-width: 100%;
 }
 
 .services .services__title {
@@ -203,7 +204,6 @@ ul {
 .services .services__card {
   display: flex;
   justify-content: space-between;
-
 }
 
 .services .card__body {
@@ -229,11 +229,10 @@ ul {
 }
 
 .works {
-  width: 100%;
+  max-width: 100%;
   background-color: #fbfbfb;
-  height: 860px;
-
-
+  min-height: 860px;
+  padding-bottom: 80px;
 }
 
 .works .works__wrapper {
@@ -241,7 +240,6 @@ ul {
   margin: 0 auto;
   padding-top: 100px;
 }
-
 
 .works .works__title {
   text-align: center;
@@ -252,6 +250,11 @@ ul {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.works .card__body {
+  margin: 10px;
 }
 
 .works__card .card__description {
@@ -272,24 +275,24 @@ ul {
 }
 
 .adaptive {
-  width: 100%;
+  max-width: 100%;
   height: 365px;
   background-color: #ff4e2e;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .adaptive .adaptive__title {
   color: white;
   font-weight: bold;
   font-size: 40px;
-  width: 1050px;
+  max-width: 1050px;
   height: 105px;
   margin-left: 114px;
   text-align: left;
   display: inline-flex;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
 .adaptive .adaptive__text {
@@ -301,18 +304,17 @@ ul {
 }
 
 .footer {
-  width: 100%;
+  max-width: 100%;
   height: 266px;
-
 }
 
 .footer .footer__wrapper {
-  width: 100%;
+  max-width: 1176spx;
   height: 100%;
   display: flex;
   justify-content: center;
 
-  align-items: center
+  align-items: center;
 }
 
 .footer .footer__contacts__body {
@@ -320,7 +322,8 @@ ul {
   height: 100px;
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer__contacts__body .contacts__navs {
@@ -351,7 +354,7 @@ ul {
 .footer__contacts__body .footer__contacts span {
   display: inline-block;
   font-size: 28px;
-  margin-left: 12px
+  margin-left: 12px;
 }
 
 .footer__contacts__body .footer__links {
@@ -373,22 +376,61 @@ ul {
 .footer__contacts__body .footer__social__links {
   display: flex;
   justify-content: space-between;
-
 }
 
 .footer .copyright {
-  width: 100%;
+  min-width: 100%;
   height: 82px;
-  background-color: #31293C;
+  background-color: #31293c;
 
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .footer .copyright span {
   display: block;
   font-size: 20px;
-
+}
+@media (max-width: 1200px) {
+  .container {
+    min-width: 960px;
+    padding: 30px;
+  }
+  .main {
+    min-width: 960px;
+  }
+  .footer {
+    min-width: 960px;
+  }
+  .header {
+    min-height: 700px;
+  }
+  .header__banner {
+    text-align: center;
+  }
+  .header .banner__avatar {
+    margin: auto;
+    max-width: 450px;
+    max-height: 450px;
+    display: block;
+  }
+  .banner__wrapper {
+  }
+  .banner__wrapper img {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    min-width: none;
+    padding: 30px;
+  }
+  .main {
+    min-width: none;
+  }
+  .footer {
+    min-width: none;
+  }
 }
